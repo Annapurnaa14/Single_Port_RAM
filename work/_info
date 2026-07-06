@@ -1,0 +1,153 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/fetools/work_area/frontend/Batch_11/AnnapurnaShenoy/Single_Port_RAM
+T_opt
+!s110 1783363985
+Vh9o[N2eESiiT5<ESOl2MX3
+04 6 4 work ram_tb fast 0
+=1-6805caf5892e-6a4bf991-a4362-28a7a
+o-quiet -auto_acc_if_foreign -work work +acc=npr
+Z1 tCvgOpt 0
+n@_opt
+OE;O;10.6c;65
+vRAM
+Z2 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z3 !s110 1783363968
+!i10b 1
+!s100 L1c681NDXz1FMLT[<1OKf2
+IcYGkMU`7FW^bOi9oIARl11
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+!s105 design_sv_unit
+S1
+R0
+w1783363204
+8design.sv
+Fdesign.sv
+L0 1
+Z5 OE;L;10.6c;65
+r1
+!s85 0
+31
+Z6 !s108 1783363968.000000
+Z7 !s107 ram_test.sv|ram_env.sv|ram_scoreboard.sv|ram_monitor.sv|ram_driver.sv|ram_generator.sv|ram_transaction.sv|defines.svh|ram_package.sv|testbench.sv|design.sv|
+Z8 !s90 -sv|+acc|+cover|+fcover|design.sv|testbench.sv|
+!i113 0
+Z9 !s102 +cover
+Z10 o-sv +acc +cover +fcover -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+n@r@a@m
+vram_assertions
+R2
+R3
+!i10b 1
+!s100 SJ4kF:bU=5;7mC7mRO37g1
+I1Qeh]]LBFkB[HJ:5KaJ?90
+R4
+Z11 !s105 testbench_sv_unit
+S1
+R0
+Z12 w1783363500
+Z13 8testbench.sv
+Z14 Ftestbench.sv
+L0 27
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 0
+R9
+R10
+R1
+Yram_if
+R2
+R3
+!i10b 1
+!s100 H:BWIbig2:b6WEM`;E][72
+ITB;OUz_]:SK02GjFlkk1P0
+R4
+R11
+S1
+R0
+R12
+R13
+R14
+L0 3
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 0
+R9
+R10
+R1
+Xram_package
+!s115 ram_if
+R2
+R3
+!i10b 1
+!s100 X@QOn[c2_fX<4ngWY=TT?0
+I<5<L^_d3zROSj7Q[`m>>L2
+V<5<L^_d3zROSj7Q[`m>>L2
+S1
+R0
+w1783363822
+Fram_package.sv
+Fdefines.svh
+Fram_transaction.sv
+Fram_generator.sv
+Fram_driver.sv
+Fram_monitor.sv
+Fram_scoreboard.sv
+Fram_env.sv
+Fram_test.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 0
+R9
+R10
+R1
+vram_tb
+R2
+DXx4 work 11 ram_package 0 22 <5<L^_d3zROSj7Q[`m>>L2
+R3
+!i10b 1
+!s100 OaI]edZMTN?Od]1V<ImjB2
+I?:XXN:DQH83;:6Q]^1CXD0
+R4
+R11
+S1
+R0
+R12
+R13
+R14
+L0 36
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 0
+R9
+R10
+R1
