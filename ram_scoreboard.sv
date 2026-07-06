@@ -16,24 +16,19 @@ class ram_scoreboard;
     ram_transaction mon_pkt;
     
     fork
-      // PROCESS 1: Update the reference memory from the driver stimulus
       forever begin
         drv2ref.get(ref_pkt);
         
         if (!ref_pkt.reset_n) begin
-          // If your DUT clears memory on reset, handle it here. 
-          // For now, keeping your reset behavior:
           golden_memory[ref_pkt.address] = 8'h00; 
         end else if (ref_pkt.write_enable && !ref_pkt.read_enable) begin
           golden_memory[ref_pkt.address] = ref_pkt.write_data;
         end
       end
 
-      // PROCESS 2: Check monitored transactions independently against the golden memory
       forever begin
         mon2sco.get(mon_pkt);
-        
-        // We only care about verifying data during an active read cycle
+
         if (mon_pkt.read_enable && !mon_pkt.write_enable && mon_pkt.reset_n) begin
           bit [7:0] expected_data;
           expected_data = golden_memory[mon_pkt.address];
@@ -41,12 +36,10 @@ class ram_scoreboard;
           if (mon_pkt.read_data === expected_data) begin
             match_count++;
           end else begin
-            $error("[%0t] SB MISMATCH! Addr: 0x%0h | Exp: 0x%0h | Act: 0x%0h", 
-                   $time, mon_pkt.address, expected_data, mon_pkt.read_data);
+            $error("[%0t] SB MISMATCH! Addr: 0x%0h | Exp: 0x%0h | Act: 0x%0h", $time, mon_pkt.address, expected_data, mon_pkt.read_data);
             error_count++;
           end
         end else begin
-          // Optional: Track non-read transactions as matches or ignore
           match_count++; 
         end
         
