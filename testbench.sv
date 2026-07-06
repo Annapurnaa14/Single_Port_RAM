@@ -70,9 +70,9 @@ module ram_tb;
 
   final begin
     $display("\n==================================================");
-    $display("           FINAL FUNCTIONAL COVERAGE REPORT");
-    $display("==================================================");
-    $display(" Total Driver Structural Coverage: %0.2f%%", test_inst.env.drv.drv_cvg.get_coverage());
+    $display("           FUNCTIONAL COVERAGE REPORT");
+    $display("====================================================");
+    $display("  Coverage: %0.2f%%", test_inst.env.drv.drv_cvg.get_coverage());
     $display("==================================================\n");
   end
 endmodule
