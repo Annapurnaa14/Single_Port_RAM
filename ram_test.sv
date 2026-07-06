@@ -17,6 +17,6 @@ class ram_test;
     env.run();
     
     wait(env.transaction_complete.triggered);
-    $display("\n TEST PASSED:  %0d Transactions Successful . Mismatches: %0d <<<", env.sco.checked_transactions, env.sco.error_count);
+    $display("\n TEST PASSED:  %0d Transactions Successful . Mismatches: %0d ", env.sco.checked_transactions, env.sco.error_count);
   endtask
 endclass
