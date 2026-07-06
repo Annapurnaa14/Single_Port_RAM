@@ -5,7 +5,6 @@ interface ram_if(input bit clk, input bit reset);
   logic read_enb;
   logic [7:0] data_out;
 
-  // Clocking block to resolve design race conditions
   clocking drv_cb @(posedge clk);
     default input #1ns output #1ns;
     output address, data_in, write_enb, read_enb;
